@@ -1,0 +1,96 @@
+# ♻️ SmartBin: AI-Powered Waste Segregation & Dashboard
+
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![YOLOv8](https://img.shields.io/badge/YOLO-v8-green.svg)](https://ultralytics.com/)
+[![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B.svg)](https://streamlit.io/)
+[![IoT](https://img.shields.io/badge/IoT-Arduino-00979D.svg)](https://www.arduino.cc/)
+
+SmartBin is an end-to-end intelligent waste management system that combines Computer Vision, IoT hardware, and Large Language Models (LLMs) to automate waste segregation and educate users on sustainable disposal.
+
+---
+
+## 🌟 Key Features
+
+### 1. 👁️ Real-Time AI Classification
+- Powered by a custom-trained **YOLOv8** model.
+- Detects and categorizes waste into **Wet**, **Dry**, and **Metal** in real-time.
+- Supports remote camera streaming via **DroidCam** integration.
+
+### 2. 🤖 EcoChat AI Assistant
+- Integrated **GPT-4o-mini** (OpenAI) chatbot specialized in recycling.
+- Provides instant, actionable advice on how to repurpose or safely dispose of detected items.
+- Maintains context-aware conversations for deep dives into circular economy practices.
+
+### 3. 🏗️ IoT Hardware Integration
+- **Arduino Firmware** included for physical waste sorting.
+- Uses **Metal Sensors**, **Infrared (IR) Sensors**, and **Moisture Sensors** for multi-modal verification.
+- Dual-servo mechanism for automatic chute rotation and bin lid operation.
+
+### 4. 📊 Analytics Dashboard
+- Built with **Streamlit** for a premium, responsive glassmorphic experience.
+- Track detection history, confidence scores, and real-time waste distribution statistics.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Backend**: Python (Flask / Streamlit)
+- **Computer Vision**: Ultralytics YOLOv8, OpenCV
+- **AI/LLM**: OpenAI API (GPT-4o-mini)
+- **Hardware**: C++ (Arduino/ESP32)
+- **Frontend**: HTML5, CSS3, JavaScript (Glassmorphic Design)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.9+
+- Arduino IDE (for hardware deployment)
+- OpenAI API Key (for EcoChat)
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/shivaanshh/CyberCup_WasteSegregation.git
+   cd CyberCup_WasteSegregation
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Configure Environment Variables**:
+   Create a `.env` file in the root directory:
+   ```env
+   OPENAI_API_KEY=your_actual_api_key_here
+   ```
+
+4. **Launch the Dashboard**:
+   ```bash
+   streamlit run app.py
+   ```
+
+---
+
+## 🔩 Hardware Setup (Arduino)
+1. Connections:
+   - **Servo 1 (Pin 9)**: Chute rotation.
+   - **Servo 2 (Pin 7)**: Lid mechanism.
+   - **Metal Sensor (A5)**, **IR Sensor (2)**, **Moisture Sensor (A0)**.
+2. Upload `arduino.ino` to your Arduino board using the IDE.
+
+---
+
+## 📸 Screenshots
+*(Add your project screenshots here)*
+
+---
+
+## 📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+**Built with ❤️ for a Greener Planet 🌍**
